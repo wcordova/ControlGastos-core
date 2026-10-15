@@ -6,7 +6,7 @@ como una dependencia más, igual que usamos el driver de MySQL en la Clase 5.
 
 ```
 Proyecto Kotlin (Maven)            ~/.m2/repository             Proyecto Android (Gradle)
-clase12-gastos-core  --mvn install-->  gastos-core-1.0.0.jar  <--mavenLocal()--  app/
+clase12-gastos-core  --mvn install-->  gastos-core-1.1.0.jar  <--mavenLocal()--  app/
 ```
 
 ## Estructura
@@ -17,7 +17,7 @@ src/main/kotlin/edu/umg/programacion2/gastos/
 ├── modelo/Gasto.kt                     -> data class: id, descripcion, monto, categoria, fecha
 ├── datos/GastoRepository.kt            -> interface con funciones suspend (contrato)
 ├── datos/GastoRepositoryEnMemoria.kt   -> implementacion con mutableListOf
-├── servicio/ControlGastos.kt           -> validar, registrar, total, totalPorCategoria, resumen
+├── servicio/ControlGastos.kt           -> validar, registrar, actualizar, buscarPorId, listar (ordenado), total, resumen
 └── consola/Main.kt                     -> menu de consola (Android NO lo usa)
 ```
 
@@ -25,7 +25,7 @@ src/main/kotlin/edu/umg/programacion2/gastos/
 
 | groupId | artifactId | version |
 |---|---|---|
-| `umg.edu.gt.progra2` | `gastos-core` | `1.0.0` |
+| `umg.edu.gt.progra2` | `gastos-core` | `1.1.0` |
 
 ## Comandos
 
@@ -39,8 +39,8 @@ mvn clean install
 
 Después de `mvn install` debe existir:
 
-- macOS / Linux: `~/.m2/repository/umg/edu/gt/progra2/gastos-core/1.0.0/gastos-core-1.0.0.jar`
-- Windows: `%USERPROFILE%\.m2\repository\umg\edu\gt\progra2\gastos-core\1.0.0\gastos-core-1.0.0.jar`
+- macOS / Linux: `~/.m2/repository/umg/edu/gt/progra2/gastos-core/1.1.0/gastos-core-1.1.0.jar`
+- Windows: `%USERPROFILE%\.m2\repository\umg\edu\gt\progra2\gastos-core\1.1.0\gastos-core-1.1.0.jar`
 
 La guía paso a paso para conectarla con Android está en
 `Clase 12/Clase12_Guia_Conectar_Kotlin_Android.md` (carpeta del curso).

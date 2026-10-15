@@ -3,11 +3,13 @@
 
   <!-- IMPORTANTE: estas 3 lineas son las "coordenadas" de la libreria.
        El proyecto Android la pedira EXACTAMENTE asi:
-         implementation("umg.edu.gt.progra2:gastos-core:1.0.0")
+         implementation("umg.edu.gt.progra2:gastos-core:1.1.0")
                          ^groupId           ^artifactId ^version -->
   <groupId>umg.edu.gt.progra2</groupId>
   <artifactId>gastos-core</artifactId>
-  <version>1.0.1</version>
+  <!-- 1.1.0: se subio el numero del medio porque se AGREGARON funciones
+       (buscarPorId, actualizar, listar ordenado) sin romper las anteriores. -->
+  <version>1.1.0</version>
   <packaging>jar</packaging>
 
   <name>Clase 12 - Gastos Core</name>
